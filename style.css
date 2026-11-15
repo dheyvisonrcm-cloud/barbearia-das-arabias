@@ -1,4 +1,4 @@
-/* ========== VARIÁVEIS (preto + dourado árabe) ========== */
+
 :root {
     --bg: #090b0f;
     --bg-alt: #0e1218;
@@ -18,11 +18,11 @@
     --font-title: 'Cinzel', Georgia, serif;
     --font-body: 'Inter', 'Segoe UI', Tahoma, sans-serif;
 
-    /* Padrão arabesco (estrela de 8 pontas) */
+
     --arabesque: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23d4af5a' stroke-opacity='.10' stroke-width='1'%3E%3Crect x='16' y='16' width='32' height='32'/%3E%3Crect x='16' y='16' width='32' height='32' transform='rotate(45 32 32)'/%3E%3Ccircle cx='32' cy='32' r='6'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* ========== RESET ========== */
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
@@ -62,7 +62,7 @@ a { color: inherit; }
 }
 .skip-link:focus { top: 12px; }
 
-/* ========== ORNAMENTO (linhas + losango dourado) ========== */
+
 .ornament {
     display: flex;
     align-items: center;
@@ -89,7 +89,7 @@ a { color: inherit; }
 .ornament-sm::before,
 .ornament-sm::after { width: 50px; }
 
-/* ========== HEADER ========== */
+
 header {
     position: fixed;
     inset: 0 0 auto 0;
@@ -161,7 +161,7 @@ nav ul li a.active { color: var(--gold-light); }
 nav ul li a:hover::after,
 nav ul li a.active::after { transform: scaleX(1); }
 
-/* Botão hambúrguer (vira X quando aberto) */
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -185,7 +185,7 @@ nav ul li a.active::after { transform: scaleX(1); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ========== HERO ========== */
+
 .hero {
     position: relative;
     min-height: 100svh;
@@ -273,7 +273,7 @@ nav ul li a.active::after { transform: scaleX(1); }
     100% { opacity: 0; transform: translateY(16px); }
 }
 
-/* Entrada do hero */
+
 .js .hero-content > * {
     opacity: 0;
     transform: translateY(20px);
@@ -287,7 +287,7 @@ nav ul li a.active::after { transform: scaleX(1); }
 .js .hero-content > *:nth-child(6) { animation-delay: 0.8s; }
 @keyframes fade-up { to { opacity: 1; transform: none; } }
 
-/* ========== BOTÕES ========== */
+
 .btn {
     display: inline-block;
     padding: 14px 32px;
@@ -318,7 +318,6 @@ nav ul li a.active::after { transform: scaleX(1); }
 }
 .btn-small { padding: 10px 22px; font-size: 0.78rem; }
 
-/* ========== DIFERENCIAIS ========== */
 .perks {
     background: #0c0f14;
     border-block: 1px solid var(--gold-dark);
@@ -340,7 +339,7 @@ nav ul li a.active::after { transform: scaleX(1); }
     color: var(--gold-light);
 }
 
-/* ========== SEÇÕES ========== */
+
 .section {
     padding: 90px 20px;
     max-width: 1100px;
@@ -370,7 +369,7 @@ nav ul li a.active::after { transform: scaleX(1); }
     color: var(--gold);
 }
 
-/* ========== SERVIÇOS (medalhões) ========== */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -390,7 +389,7 @@ nav ul li a.active::after { transform: scaleX(1); }
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 90, 0.08);
 }
 
-/* Moldura redonda dourada */
+
 .medal {
     width: 124px;
     height: 124px;
@@ -444,14 +443,14 @@ nav ul li a.active::after { transform: scaleX(1); }
 }
 .card p { font-size: 0.93rem; color: var(--muted); }
 
-/* ========== SOBRE ========== */
+
 .about-text {
     color: #cfc8b6;
     font-size: 1.1rem;
 }
 .about-text strong { color: var(--gold-light); font-weight: 600; }
 
-/* ========== CONTATO ========== */
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -505,7 +504,7 @@ nav ul li a.active::after { transform: scaleX(1); }
     font-weight: 600;
 }
 
-/* ========== BADGE DE STATUS ========== */
+
 .badge {
     display: inline-flex;
     align-items: center;
@@ -540,7 +539,6 @@ nav ul li a.active::after { transform: scaleX(1); }
     100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
 }
 
-/* ========== RODAPÉ ========== */
 footer {
     text-align: center;
     padding: 44px 20px 36px;
@@ -565,7 +563,7 @@ footer {
 }
 .to-top:hover { color: var(--gold-light); }
 
-/* ========== ANIMAÇÃO DE ENTRADA (scroll) ========== */
+
 .js .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -578,7 +576,7 @@ footer {
 .js .contact-grid .reveal:nth-child(3) { transition-delay: 0.2s; }
 .js .services-grid .reveal:nth-child(4) { transition-delay: 0.3s; }
 
-/* ========== CELULAR ========== */
+
 @media (max-width: 768px) {
     :root { --header-h: 64px; }
 
@@ -617,12 +615,12 @@ footer {
     .ornament::after { width: 48px; }
 }
 
-/* Header sólido no menu aberto (celular) */
+
 header:has(nav.open) {
     background: rgba(9, 11, 15, 0.97);
 }
 
-/* ========== ACESSIBILIDADE: menos movimento ========== */
+
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
