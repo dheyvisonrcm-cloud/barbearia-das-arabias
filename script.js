@@ -1,11 +1,11 @@
-// Marca que o JS está ativo (as animações só escondem elementos se o JS rodar)
+
 document.documentElement.classList.add('js');
 
 const header = document.querySelector('header');
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.getElementById('menu');
 
-// ========== 1. MENU MOBILE ==========
+
 function setMenu(aberto) {
     if (!navToggle || !navMenu) return;
     navMenu.classList.toggle('open', aberto);
@@ -19,21 +19,21 @@ if (navToggle) {
     });
 }
 
-// Fecha ao clicar num link, apertar Esc ou clicar fora
+
 navMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 document.addEventListener('click', e => {
     if (!header.contains(e.target)) setMenu(false);
 });
 
-// ========== 2. HEADER MUDA AO ROLAR ==========
+
 function atualizarHeader() {
     header.classList.toggle('scrolled', window.scrollY > 40);
 }
 window.addEventListener('scroll', atualizarHeader, { passive: true });
 atualizarHeader();
 
-// ========== 3. LINK ATIVO NO MENU ==========
+
 const links = [...document.querySelectorAll('nav a[href^="#"]')];
 const secoes = links
     .map(a => document.querySelector(a.getAttribute('href')))
@@ -53,7 +53,7 @@ if ('IntersectionObserver' in window) {
     secoes.forEach(s => obsMenu.observe(s));
 }
 
-// ========== 4. ANIMAÇÃO AO ROLAR ==========
+
 const reveals = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window) {
@@ -71,8 +71,7 @@ if ('IntersectionObserver' in window) {
     reveals.forEach(el => el.classList.add('visible'));
 }
 
-// ========== 5. STATUS ABERTO/FECHADO ==========
-// Horários em minutos desde 00:00. 0 = Domingo ... 6 = Sábado
+
 const HORARIOS = {
     0: [8 * 60, 12 * 60],   // Domingo
     1: null,                // Segunda: fechado
@@ -146,6 +145,6 @@ function verificarStatusBarbearia() {
 verificarStatusBarbearia();
 setInterval(verificarStatusBarbearia, 60 * 1000); // atualiza sozinho a cada minuto
 
-// ========== 6. ANO DO RODAPÉ ==========
+
 const ano = document.getElementById('ano');
 if (ano) ano.textContent = new Date().getFullYear();
