@@ -2,7 +2,7 @@
 
 Site institucional da **Barbearia das Arábias**, em Santana, Camaragibe - PE.
 Visual preto e dourado de inspiração árabe, 100% estático (HTML, CSS e JavaScript puro), sem frameworks e sem etapa de build.
-
+Link:https://barbearia-das-arabias.netlify.app/
 > *Cortes de Rei e Barba de Respeito.*
 
 ---
