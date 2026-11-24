@@ -2,7 +2,7 @@
 
 Site institucional da **Barbearia das Arábias**, em Santana, Camaragibe - PE.
 Visual preto e dourado de inspiração árabe, 100% estático (HTML, CSS e JavaScript puro), sem frameworks e sem etapa de build.
-Link:https://barbearia-das-arabias.netlify.app/
+Link: https://barbearia-das-arabias.pages.dev/
 > *Cortes de Rei e Barba de Respeito.*
 
 ---
@@ -102,7 +102,7 @@ Por ser estático, qualquer hospedagem de arquivos serve. Opções gratuitas:
 | Opção | Como publicar |
 |---|---|
 | **Cloudflare Pages** | Painel do Cloudflare → Workers & Pages → Pages → enviar a pasta do projeto |
-| **Netlify** | Arrastar a pasta do projeto em [app.netlify.com/drop](https://app.netlify.com/drop) |
+| **CLoudFlare** | Arrastar a pasta do projeto em [app.netlify.com/drop](https://app.netlify.com/drop) |
 | **GitHub Pages** | Subir o projeto num repositório e ativar Pages em *Settings → Pages* |
 
 Confira os termos de uso comercial de cada plano antes de publicar um site de negócio.
